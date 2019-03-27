@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Task(props) {
+function Todo(props) {
     return (
-        <div className="App">
-            <p>{props.taskProp.task}</p>
-        </div>
+     <p>
+        {props.task.task}
+     </p>
     );
 }
 
-export default Task;
+export default Todo;
