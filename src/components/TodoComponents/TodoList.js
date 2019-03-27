@@ -4,12 +4,12 @@ import React from 'react';
 import Task from './Todo';
 import TodoForm from './TodoForm';
 
-class Task extends React.Component {
+class TodoList extends React.Component {
     constructor() {
         super();
 
         this.state = {
-            tasks: [
+            taskList: [
                 {
                 task: 'Organize Garage',
                 id: 1528817077286,
@@ -30,8 +30,8 @@ class Task extends React.Component {
                 <h1>Todo List: MVP</h1>
 
                 <div className="task-list">
-                    {this.state.tasks.map(task => (
-                        <Task task={task} />
+                    {this.state.taskList.map((taskFromMap, index) => (
+                        <Task key={index} task={taskFromMap} />
                     ))}
                 </div>
                 <TodoForm addTask={this.addTask} />
@@ -46,4 +46,4 @@ class Task extends React.Component {
     };
 }
 
-export default Task;
+export default TodoList;
