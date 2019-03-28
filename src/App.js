@@ -1,6 +1,5 @@
 import React from 'react';
 import TodoForm from './components/TodoComponents/TodoForm';
-import TodoList from './components/TodoComponents/TodoList';
 import Header from './components/TodoComponents/Header';
 
 class App extends React.Component {
@@ -38,6 +37,11 @@ class App extends React.Component {
     this.setState({ todos });
   }
 
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
 
   render() {
     return (
